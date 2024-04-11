@@ -1,0 +1,34 @@
+.cardContainer{
+    background-color: rgb(238, 230, 250);
+    border-radius: 5px;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.location{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+}
+
+.imgSol{
+    width: 60%;
+}
+
+.climaTemperatura{
+    display: flex;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+}
+
+.climaToday{
+    display: flex;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
