@@ -1,0 +1,22 @@
+.cardContainer{
+    background-color: rgb(202, 208, 236);
+    width: 35%;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.imgSol{
+    height: 200px;
+}
+
+.clima{
+    display: flex;
+}
