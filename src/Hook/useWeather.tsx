@@ -1,37 +1,31 @@
 import { useState } from 'react';
+import { DataAPI } from '../types/WeatherAPI.type';
 
-const useWeather = async () => {
+const useWeather = () => {
     const [isLoading, setIsLoading] = useState(false);
-    const URL_API = 'https://visual-crossing-weather.p.rapidapi.com/forecast?aggregateHours=24&location=Buenos%20aires';
+    const API_KEY = "fd657707608bb8b5453c0ed0c8bcea86";
 
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Key': '0a0fa52611mshe0e3c29332efea9p15e7c9jsn5b7d4112d25b',
-            'X-RapidAPI-Host': 'visual-crossing-weather.p.rapidapi.com'
+    const getWeather = async ({ciudad}: { ciudad: string}) => {
+        const URL_API = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad}&appid=${API_KEY}`;
+        setIsLoading(true);
+
+        try {
+            const respuesta = await fetch(URL_API);
+            const data: DataAPI = await respuesta.json();
+
+            if (data) {
+                return data;
+            }
+        } catch (error) {
+            throw error;
+        } finally {
+            setIsLoading(false);
         }
-    };
-
-    setIsLoading(true);
-
-    try {
-        const response = await fetch(URL_API, options);
-        const data = await response.json();
-        console.log(data);
-
-        if(data){
-            return data; 
-        }
-
-    } catch (error) {
-        console.error(error);
-    } finally{
-        setIsLoading(false);
     }
 
     return {
         isLoading,
-        useWeather
+        getWeather
     }
 }
 
