@@ -1,11 +1,48 @@
+.conteinerPrincipal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.formContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-right: 120px;
+}
+
+.cardHomeContainer{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .cardContainer{
     background-color: rgb(238, 230, 250);
     border-radius: 5px;
-    width: 30%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.searchLocation{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+}
+
+.btnBuscar{
+    background-color: rgb(238, 230, 250);
+    border: 1px solid rgb(216, 197, 245);
+    color: rgb(144, 110, 196);
+    margin-left: 15px;
 }
 
 .location{
