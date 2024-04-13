@@ -24,7 +24,7 @@ const Home = () => {
         <>
             <div className="conteinerPrincipal">
                 <div className="formContainer">
-                    <form onSubmit={(e) => callWeather(e)}>
+                    <form onSubmit={(e) => callWeather(e)} className="formBusqueda">
                         <label htmlFor="">
                             <p className="searchLocation">Escribe una ciudad</p>
                             <input
@@ -42,7 +42,7 @@ const Home = () => {
                     {weather !== null ? (
                         <Card weather={weather} />
                     ) : (
-                        <div>No se encontraron datos meteorológicos</div>
+                        <div className="noData">No se encontraron datos meteorológicos</div>
                     )}
                 </div>
             </div>
