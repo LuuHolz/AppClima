@@ -11,14 +11,27 @@ const Card = ({ weather }: { weather: DataAPI | null }) => {
             <div className='cardContainer'>
                 <p className='location'>{weather?.name}</p>
                 <img src={Sol} alt="" className='imgSol' />
-                <div className='climaTemperatura'>
-                    <p>{convertKelvinToCelsius(weather?.main.temp)} °C</p>
-                    {weather && weather.weather && weather.weather[0] && (
-                        <p>{weather.weather[0].description}</p>
-                    )}
+
+                <div className="climaTemperatura">
+                    <div className='temperatura'>
+                        <p>{convertKelvinToCelsius(weather?.main.temp)} °C</p>
+                    </div>
+                    <div className="clima">
+                        {weather && weather.weather && weather.weather[0] && (
+                            <p>{weather.weather[0].description}</p>
+                        )}
+                    </div>
                 </div>
+
+
+
                 <div className='climaToday'>
-                    Hoy {convertKelvinToCelsius(weather?.main.temp_min)}°C / {convertKelvinToCelsius(weather?.main.temp_max)}°C
+                    <div className="today">
+                        <p>Hoy</p>
+                    </div>
+                    <div className="maxMin">
+                        {convertKelvinToCelsius(weather?.main.temp_min)}°C / {convertKelvinToCelsius(weather?.main.temp_max)}°C
+                    </div>
                 </div>
             </div>
         </div>

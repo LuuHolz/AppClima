@@ -54,18 +54,46 @@
 .imgSol{
     width: 60%;
 }
-
 .climaTemperatura{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.temperatura{
     display: flex;
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-top: 30px;
+    margin-right: 15px;
+}
+
+.clima{
+    display: flex;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    margin-left: 15px;
 }
 
 .climaToday{
     display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+.today{
+    display: flex;
     font-size: 18px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding-top: 30px;
-    padding-bottom: 50px;
+    margin-right: 25px;
+}
+
+.maxMin{
+    display: flex;
+    font-size: 18px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30px;
+    margin-left: 25px;
 }
